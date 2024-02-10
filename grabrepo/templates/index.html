@@ -1,0 +1,15 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Repository Analyzer</title>
+</head>
+<body>
+    <h2>GitHub Repository Analyzer</h2>
+    <form method="post" action="{% url 'download_and_analyze' %}">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Analyze</button>
+    </form>
+</body>
+</html>
